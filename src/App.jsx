@@ -409,7 +409,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Email Us</p>
-                  <p className="text-white font-medium">info@airial-limited.co.uk</p>
+                  <p className="text-white font-medium">matt2.ward@gmail.com</p>
                 </div>
               </div>
 
@@ -419,7 +419,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Call Us</p>
-                  <p className="text-white font-medium">0800 123 4567</p>
+                  <p className="text-white font-medium">07798672236</p>
                 </div>
               </div>
               
