@@ -182,7 +182,7 @@ const App = () => {
                     <img 
                       src="https://upload.wikimedia.org/wikipedia/en/7/75/UK_Civil_Aviation_Authority_logo.svg" 
                       alt="CAA Logo" 
-                      className="h-10 w-auto opacity-80" 
+                      className="h-30 w-auto opacity-80" 
                       onError={(e) => {e.target.style.display='none'}} // Hides image if it fails to load
                     />
                   </div>
@@ -447,7 +447,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Email Us</p>
-                  <p className="text-white font-medium">info@airial-limited.co.uk</p>
+                  <p className="text-white font-medium">matt2.ward@gmail.com</p>
                 </div>
               </div>
 
@@ -457,7 +457,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Call Us</p>
-                  <p className="text-white font-medium">0800 123 4567</p>
+                  <p className="text-white font-medium">+44 7798672266</p>
                 </div>
               </div>
               
