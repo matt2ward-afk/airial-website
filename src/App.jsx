@@ -182,7 +182,7 @@ const App = () => {
                     <img 
                       src="https://upload.wikimedia.org/wikipedia/en/7/75/UK_Civil_Aviation_Authority_logo.svg" 
                       alt="CAA Logo" 
-                      className="h-10 w-auto opacity-80" 
+                      className="h-16 w-auto opacity-80" 
                       onError={(e) => {e.target.style.display='none'}} // Hides image if it fails to load
                     />
                   </div>
