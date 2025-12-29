@@ -178,12 +178,12 @@ const App = () => {
                       <span className="block text-xl font-bold text-white mb-1">CAA</span>
                       <span className="text-sm text-slate-500">Compliant & Licensed</span>
                     </div>
-                    {/* Placeholder for CAA Logo - You can replace the src with a local file later if needed */}
+                    {/* Updated Logo: Larger and Correct SVG URL */}
                     <img 
                       src="https://upload.wikimedia.org/wikipedia/en/7/75/UK_Civil_Aviation_Authority_logo.svg" 
                       alt="CAA Logo" 
-                      className="h-16 w-auto opacity-80" 
-                      onError={(e) => {e.target.style.display='none'}} // Hides image if it fails to load
+                      className="h-16 w-auto" 
+                      onError={(e) => {e.target.style.display='none'}} 
                     />
                   </div>
                 </div>
@@ -463,13 +463,47 @@ const App = () => {
               
               <div className="text-center mt-8">
                 <p className="text-slate-500 text-sm mb-4">Or fill out the form below to request a call back</p>
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                
+                {/* IMPORTANT: TO MAKE THIS FORM WORK
+                   1. Go to https://formspree.io/ and create a free account
+                   2. Create a "New Form"
+                   3. Paste the URL they give you (e.g. https://formspree.io/f/xyz...) 
+                      into the action="" quotes below.
+                */}
+                <form 
+                  className="space-y-4" 
+                  action="https://formspree.io/f/xnjqwvpd" 
+                  method="POST"
+                >
                   <div className="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="Name" className="bg-slate-950 border border-slate-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-sky-500 focus:outline-none" />
-                    <input type="text" placeholder="Phone" className="bg-slate-950 border border-slate-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-sky-500 focus:outline-none" />
+                    <input 
+                      type="text" 
+                      name="name"
+                      placeholder="Name" 
+                      className="bg-slate-950 border border-slate-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-sky-500 focus:outline-none" 
+                      required
+                    />
+                    <input 
+                      type="text" 
+                      name="phone"
+                      placeholder="Phone" 
+                      className="bg-slate-950 border border-slate-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-sky-500 focus:outline-none" 
+                    />
                   </div>
-                  <input type="email" placeholder="Email Address" className="bg-slate-950 border border-slate-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-sky-500 focus:outline-none" />
-                  <textarea placeholder="Tell us about your project..." rows={4} className="bg-slate-950 border border-slate-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-sky-500 focus:outline-none"></textarea>
+                  <input 
+                    type="email" 
+                    name="email"
+                    placeholder="Email Address" 
+                    className="bg-slate-950 border border-slate-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-sky-500 focus:outline-none" 
+                    required
+                  />
+                  <textarea 
+                    name="message"
+                    placeholder="Tell us about your project..." 
+                    rows={4} 
+                    className="bg-slate-950 border border-slate-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-sky-500 focus:outline-none"
+                    required
+                  ></textarea>
                   <button className="w-full bg-gradient-to-r from-sky-600 to-blue-700 hover:from-sky-500 hover:to-blue-600 text-white font-bold py-4 rounded-lg shadow-lg transform transition hover:scale-[1.02]">
                     Send Enquiry
                   </button>
