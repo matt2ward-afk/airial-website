@@ -14,7 +14,8 @@ import {
   X,
   ScanLine,
   Layers,
-  ShieldCheck
+  ShieldCheck,
+  ClipboardCheck
 } from 'lucide-react';
 
 const App = () => {
@@ -212,17 +213,17 @@ const App = () => {
             <p className="text-xl text-slate-400 max-w-2xl mx-auto">Tailored solutions for construction professionals and property owners.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Commercial / B2B */}
             <div className="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-sky-500/50 transition-colors group">
               <div className="h-12 w-12 bg-sky-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-sky-600 transition-colors">
                 <Building2 className="h-6 w-6 text-sky-400 group-hover:text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Construction & Architecture</h3>
-              <p className="text-slate-400 mb-6">
+              <p className="text-slate-400 mb-6 text-sm">
                 Rapid data capture for site progress, planning, and design. We convert physical sites into digital assets.
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3">
                 {[
                   "High Density Point Clouds",
                   "Digital Elevation Models (DEM)",
@@ -244,12 +245,12 @@ const App = () => {
                 <Home className="h-6 w-6 text-indigo-400 group-hover:text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Residential & Real Estate</h3>
-              <p className="text-slate-400 mb-6">
+              <p className="text-slate-400 mb-6 text-sm">
                 Cost-effective surveys for maintenance, sales, and landscaping. No scaffolding required.
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3">
                 {[
-                  "Roof Condition Surveys (4K Images)",
+                  "Roof Condition Surveys (4K)",
                   "Chimney & Gutter Inspection",
                   "Bird's Eye View Photography",
                   "Landscaping Surveys",
@@ -262,6 +263,32 @@ const App = () => {
                 ))}
               </ul>
             </div>
+
+            {/* Consultancy / Expert (New Service) */}
+            <div className="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-teal-500/50 transition-colors group">
+              <div className="h-12 w-12 bg-teal-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors">
+                <ClipboardCheck className="h-6 w-6 text-teal-400 group-hover:text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Aviation Consultancy & T&E</h3>
+              <p className="text-slate-400 mb-6 text-sm">
+                Independent consultant providing SME input into R&D, T&E and bid phases of aerospace and defence projects.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  "SORA Application Support",
+                  "Helicopter Flight Test Categories",
+                  "Simulator Test Flight Activities",
+                  "Risk Management for Flight Trials",
+                  "Theoretical & Practical Advice"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start text-slate-300 text-sm">
+                    <ArrowRight className="h-4 w-4 text-teal-500 mr-2 mt-1 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
           </div>
         </div>
       </section>
@@ -377,7 +404,7 @@ const App = () => {
              {/* Card 3 */}
              <div className="bg-slate-950 p-8 rounded-xl border border-slate-800 flex flex-col">
                <div className="mb-4">
-                 <span className="text-indigo-400 font-semibold text-sm uppercase tracking-wide">Consultation</span>
+                 <span className="text-teal-400 font-semibold text-sm uppercase tracking-wide">Consultation</span>
                  <h3 className="text-2xl font-bold text-white mt-1">Site Visit</h3>
                </div>
                <div className="mb-6">
@@ -409,7 +436,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Email Us</p>
-                  <p className="text-white font-medium">matt2.ward@gmail.com</p>
+                  <p className="text-white font-medium">info@airial-limited.co.uk</p>
                 </div>
               </div>
 
@@ -419,7 +446,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Call Us</p>
-                  <p className="text-white font-medium">07798672236</p>
+                  <p className="text-white font-medium">0800 123 4567</p>
                 </div>
               </div>
               
@@ -459,4 +486,4 @@ const App = () => {
   );
 };
 
-export default App; // We renamed it to App to match the filename
+export default App;
