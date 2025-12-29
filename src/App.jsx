@@ -166,14 +166,24 @@ const App = () => {
                 <p>
                   Whether you are a major construction firm needing a site model or a homeowner needing a roof inspection, you get the same level of rigorous safety planning and professional execution.
                 </p>
-                <div className="pt-6 grid grid-cols-2 gap-4">
+                {/* UPDATED: More punchy title */}
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                    <span className="block text-2xl font-bold text-white mb-1">100%</span>
-                    <span className="text-sm text-slate-500">Safety Record</span>
+                    <span className="block text-xl font-bold text-white mb-1">Operational Risk Expert</span>
+                    <span className="text-sm text-slate-500">Complex Environments</span>
                   </div>
-                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-800">
-                    <span className="block text-2xl font-bold text-white mb-1">CAA</span>
-                    <span className="text-sm text-slate-500">Compliant & Licensed</span>
+                  {/* UPDATED: CAA Tile with Logo */}
+                  <div className="bg-slate-900 p-4 rounded-lg border border-slate-800 flex items-center justify-between">
+                    <div>
+                      <span className="block text-xl font-bold text-white mb-1">CAA</span>
+                      <span className="text-sm text-slate-500">Compliant & Licensed</span>
+                    </div>
+                    {/* Placeholder for CAA Logo - You can replace the src with a local file later if needed */}
+                    <img 
+                      src="https://upload.wikimedia.org/wikipedia/en/b/b8/Civil_Aviation_Authority_%28United_Kingdom%29_logo.svg" 
+                      alt="CAA Logo" 
+                      className="h-10 w-auto opacity-80" 
+                      onError={(e) => {e.target.style.display='none'}} // Hides image if it fails to load
+                    />
                   </div>
                 </div>
               </div>
@@ -436,7 +446,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Email Us</p>
-                  <p className="text-white font-medium">info@airial-limited.co.uk</p>
+                  <p className="text-white font-medium">matt2.ward@gmail.com</p>
                 </div>
               </div>
 
@@ -446,7 +456,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Call Us</p>
-                  <p className="text-white font-medium">0800 123 4567</p>
+                  <p className="text-white font-medium">07798672266</p>
                 </div>
               </div>
               
