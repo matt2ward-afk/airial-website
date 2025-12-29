@@ -166,7 +166,8 @@ const App = () => {
                 <p>
                   Whether you are a major construction firm needing a site model or a homeowner needing a roof inspection, you get the same level of rigorous safety planning and professional execution.
                 </p>
-                {/* UPDATED: More punchy title */}
+                <div className="pt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* UPDATED: More punchy title */}
                   <div className="bg-slate-900 p-4 rounded-lg border border-slate-800">
                     <span className="block text-xl font-bold text-white mb-1">Operational Risk Expert</span>
                     <span className="text-sm text-slate-500">Complex Environments</span>
@@ -179,7 +180,7 @@ const App = () => {
                     </div>
                     {/* Placeholder for CAA Logo - You can replace the src with a local file later if needed */}
                     <img 
-                      src="https://upload.wikimedia.org/wikipedia/en/b/b8/Civil_Aviation_Authority_%28United_Kingdom%29_logo.svg" 
+                      src="https://upload.wikimedia.org/wikipedia/en/7/75/UK_Civil_Aviation_Authority_logo.svg" 
                       alt="CAA Logo" 
                       className="h-10 w-auto opacity-80" 
                       onError={(e) => {e.target.style.display='none'}} // Hides image if it fails to load
@@ -274,7 +275,7 @@ const App = () => {
               </ul>
             </div>
 
-            {/* Consultancy / Expert (New Service) */}
+            {/* Consultancy / Expert */}
             <div className="bg-slate-950 rounded-2xl p-8 border border-slate-800 hover:border-teal-500/50 transition-colors group">
               <div className="h-12 w-12 bg-teal-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors">
                 <ClipboardCheck className="h-6 w-6 text-teal-400 group-hover:text-white" />
@@ -340,7 +341,7 @@ const App = () => {
               </div>
             </div>
             
-            {/* Visual Abstract Representation of Point Cloud */}
+            {/* Visual Abstract Representation of Point Cloud (Static) */}
             <div className="lg:w-1/2 relative h-80 bg-slate-900 rounded-xl overflow-hidden border border-slate-800">
                <div className="absolute inset-0 grid grid-cols-12 grid-rows-6 gap-1 opacity-20">
                   {[...Array(72)].map((_, i) => (
@@ -446,7 +447,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Email Us</p>
-                  <p className="text-white font-medium">matt2.ward@gmail.com</p>
+                  <p className="text-white font-medium">info@airial-limited.co.uk</p>
                 </div>
               </div>
 
@@ -456,7 +457,7 @@ const App = () => {
                 </div>
                 <div>
                   <p className="text-sm text-slate-400">Call Us</p>
-                  <p className="text-white font-medium">07798672266</p>
+                  <p className="text-white font-medium">0800 123 4567</p>
                 </div>
               </div>
               
