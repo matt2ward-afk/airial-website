@@ -1,3 +1,4 @@
+import GSDCalculator from './components/GSDCalculator';
 import React, { useState } from 'react';
 import { 
   Plane, 
@@ -17,7 +18,7 @@ import {
   ShieldCheck,
   ClipboardCheck
 } from 'lucide-react';
-
+<Route path="/calculator" element={<GSDCalculator />} />
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
