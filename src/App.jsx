@@ -18,7 +18,6 @@ import {
   ShieldCheck,
   ClipboardCheck
 } from 'lucide-react';
-<Route path="/calculator" element={<GSDCalculator />} />
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -45,7 +44,7 @@ const App = () => {
             
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                {['Services', 'About', 'Technical', 'Pricing', 'Contact'].map((item) => (
+                {['Services', 'About', 'Technical', 'Calculator', 'Pricing', 'Contact'].map((item) => (
                   <button
                     key={item}
                     onClick={() => scrollToSection(item.toLowerCase())}
@@ -75,7 +74,7 @@ const App = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-slate-900 border-b border-slate-800">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {['Services', 'About', 'Technical', 'Pricing', 'Contact'].map((item) => (
+              {['Services', 'About', 'Technical', 'Calculator', 'Pricing', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -362,7 +361,18 @@ const App = () => {
           </div>
         </div>
       </section>
-
+{/* GSD Calculator Section */}
+<section id="calculator" className="py-24 bg-slate-950">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">GSD Calculator</h2>
+      <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+        Calculate Ground Sampling Distance for your aerial survey
+      </p>
+    </div>
+    <GSDCalculator />
+  </div>
+</section>
       {/* Pricing Section */}
       <section id="pricing" className="py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
