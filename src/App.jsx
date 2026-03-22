@@ -1,4 +1,4 @@
-import GSDCalculator from './components/GSDCalculator';
+import GSDCalculator from "./GSDCalculator";
 import React, { useState } from 'react';
 import { 
   Plane, 
